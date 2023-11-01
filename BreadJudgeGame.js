@@ -6,19 +6,36 @@ const gameStop = document.getElementById("gameStop");
 //給料明細表示場所
 const resrutArea = document.getElementById("resrutArea");
 //画像表示場所
-const answerArea = document.getElementById('answerArea');
+const answerArea_img_01 = document.getElementById('answerArea_img_01');
+const answerArea_img_02 = document.getElementById('answerArea_img_02');
+const answerArea_img_03 = document.getElementById('answerArea_img_03');
+const answerArea_img_04 = document.getElementById('answerArea_img_04');
+//answerArea_img_01.style.display = "none";
+answerArea_img_02.style.display = "none";
+answerArea_img_03.style.display = "none";
+answerArea_img_04.style.display = "none";
 const quizArea = document.getElementById('quizArea');
 //見本画像
-const answerImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/melonpan_board.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/syokupan_board.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/mushi_board.png?raw=true'];
+const answerImages = ['./img/melonpan_board.png', './img/syokupan_board.png', './img/mushi_board.png'];
 //No0～4正しい画像　5~9間違え画像
-const ZeroquizImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/food_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad1_pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad2_pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad3_pan_melonpan.png?raw=true'];
-const OnequizImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan_usui.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_toast_kongari.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad1_bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad2_bread_syokupan.png?raw=true'];
-const TwoquizImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_white.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad1_pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad2_pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad3_pan_mushipan_yellow.png?raw=true'];
+const ZeroquizImages = ['./img/pan_melonpan.png', './img/pan_melonpan.png', './img/pan_melonpan.png', './img/pan_melonpan.png', './img/pan_melonpan.png', './img/food_melonpan.png', './img/bread_syokupan.png', './img/bad1_pan_melonpan.png', './img/bad2_pan_melonpan.png', './img/bad3_pan_melonpan.png'];
+const OnequizImages = ['./img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan_usui.png', './img/pan_toast_kongari.png', './img/pan_mushipan_yellow.png', './img/bad1_bread_syokupan.png', './img/bad2_bread_syokupan.png'];
+const TwoquizImages = ['./img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_white.png', './img/pan_melonpan.png', './img/bad1_pan_mushipan_yellow.png', './img/bad2_pan_mushipan_yellow.png', './img/bad3_pan_mushipan_yellow.png'];
 //他の画像
-const images = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/log.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/board.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/han_siro.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/konbea.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/maru.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/batu.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/up.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/down.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/buy.png?raw=true'];
+const images = ['./img/log.png','./img/board.png','./img/siro.png','./img/han_siro.png','./img/konbea.png','./img/maru.png','./img/batu.png','./img/up.png','./img/down.png','./img/buy.png'];
 //判断表示場所
-const judgeArea = document.getElementById('judgeArea');
-const updownArea = document.getElementById('updownArea');
+const judgeArea_img_01 = document.getElementById('judgeArea_img_01');
+const judgeArea_img_02 = document.getElementById('judgeArea_img_02');
+const judgeArea_img_03 = document.getElementById('judgeArea_img_03');
+judgeArea_img_02.style.display = "none";
+judgeArea_img_03.style.display = "none";
+const updownArea_img_01 = document.getElementById('updownArea_img_01');
+const updownArea_img_02 = document.getElementById('updownArea_img_02');
+const updownArea_img_03 = document.getElementById('updownArea_img_03');
+const updownArea_img_04 = document.getElementById('updownArea_img_04');
+updownArea_img_02.style.display = "none";
+updownArea_img_03.style.display = "none";
+updownArea_img_04.style.display = "none";
 //時給表示場所
 const displayArea = document.getElementById('displayArea');
 
@@ -45,6 +62,7 @@ let allStop = 0;
 var startGameTime;
 //問題表示された時間
 var startTime;
+
 
 
 
@@ -96,12 +114,17 @@ gameStart.addEventListener("click", () => {
   //開始ボタンクリック時間の記録
   startGameTime = Date.now();
 
+  //見本表示場所の初期化
+  answerArea_img_02.style.display = "none";
+  answerArea_img_03.style.display = "none";
+  answerArea_img_04.style.display = "none";
+  //判断結果表示場所の初期化
+  judgeArea_img_02.style.display = "none";
+  judgeArea_img_03.style.display = "none";
   //給料明細表示場所の初期化
   resrutArea.innerText = '　　　　　'
-
-  //判断表示場所の初期化
-  judgeArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true';
-
+  //時給表示場所の初期化
+  displayArea.innerText = '現在の時給1200円';
   //初期化
   allStop = 0;
   niceCount = 0;
@@ -111,9 +134,6 @@ gameStart.addEventListener("click", () => {
   downCount = 0;
   judgeCount = 0;
 
-  //時給表示場所の初期化
-  displayArea.innerText = '現在の時給1200円';
-
   start()
 })
 
@@ -122,16 +142,17 @@ gameStart.addEventListener("click", () => {
 //終了ボタンクリック
 gameStop.addEventListener("click", () => {
 
-  //問題表示場所の初期化
-  quizArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true';
-
-  allStop++
-
   //開始ボタンクリックから終了ボタンクリックまでの時間
   let currentGameTime = Date.now();
   let gameSeconds = (currentGameTime - startGameTime) / 1000;
 
-  //ret[0]=jikyuu,ret[1]=buyCount,ret[2]=judgeCount
+  //問題表示場所の初期化
+  quizArea.src = './img/siro.png';
+
+  //終了ボタン押された回数
+  allStop++
+
+  //ret[0]=jikyuu,ret[1]=buyCount,ret[2]=judgeCountを格納
   let ret = salary(4);
 
   let byoukyuu = (ret[0] / 60) / 60;
@@ -139,9 +160,8 @@ gameStop.addEventListener("click", () => {
   let buyMony = -(ret[1] * 100);
   let sum = gameSalary + buyMony;
 
-  let judgekaisuu = ret[2];
-
   //3秒毎に一回はパンの判定を行っているか確認する
+  let judgekaisuu = ret[2];
   let sixGameSeconds = gameSeconds.toFixed(6);
   let hanntei = sixGameSeconds / 3.000000;
 
@@ -162,42 +182,53 @@ gameStop.addEventListener("click", () => {
 //画像ランダム表示
 function image() {
 
-  const answerImageNo = Math.floor(Math.random() * answerImages.length)
-  answerArea.src = answerImages[answerImageNo];
+  //見本表示場所の初期化
+  answerArea_img_02.style.display = "none";
+  answerArea_img_03.style.display = "none";
+  answerArea_img_04.style.display = "none";
 
+  //見本の選択
+  const answerImageNo = Math.floor(Math.random() * answerImages.length)
+
+  //見本メロンパン
   if (answerImageNo === 0) {
+    answerArea_img_02.style.display = "block";
     const ZeroquizImageNo = Math.floor(Math.random() * ZeroquizImages.length)
     quizArea.src = ZeroquizImages[ZeroquizImageNo];
     if (ZeroquizImageNo < 5) {
-      //正解メロンパン時の正解
+      //見本メロンパン時の正解
       return 1;
     }
     else {
-      //正解メロンパン時の不正解
+      //見本メロンパン時の不正解
       return 2;
     }
   }
+  //見本食パン
   if (answerImageNo === 1) {
+    answerArea_img_03.style.display = "block";
     const OnequizImageNo = Math.floor(Math.random() * OnequizImages.length)
     quizArea.src = OnequizImages[OnequizImageNo];
     if (OnequizImageNo < 5) {
-      //正解食パン時の正解
+      //見本食パン時の正解
       return 1;
     }
     else {
-      //正解食パン時の不正解
+      //見本食パン時の不正解
       return 2;
     }
   }
+  //見本蒸しパン
   if (answerImageNo === 2) {
+    answerArea_img_04.style.display = "block";
     const TwoquizImageNo = Math.floor(Math.random() * TwoquizImages.length)
     quizArea.src = TwoquizImages[TwoquizImageNo];
     if (TwoquizImageNo < 5) {
-      //正解蒸しパン時の正解
+      //見本蒸しパン時の正解
       return 1;
     }
     else {
-      //正解蒸しパン時の不正解
+      //見本蒸しパン時の不正解
       return 2;
     }
   }
@@ -208,15 +239,13 @@ function image() {
 //問題表示
 function start() {
 
-  //updown表示場所の初期化
-  updownArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/han_siro.png?raw=true';
-
   //問題表示時間の記録
   startTime = Date.now();
 
-  //正解と問題の画像ランダム表示
+  //見本と問題の画像ランダム表示
   imageJudge = image();
 
+  //問題表示場所のアニメーション
   quizArea.animate(
     [
       { transform: 'translateX(0)' }, // 開始時の状態（左端）
@@ -235,6 +264,10 @@ function start() {
 document.onkeydown = judge;
 function judge(e) {
 
+  //判断結果表示の初期化
+  judgeArea_img_02.style.display = "none";
+  judgeArea_img_03.style.display = "none";
+
   //問題表示されてから回答までの時間
   let currentTime = Date.now();
   let seconds = (currentTime - startTime) / 1000;
@@ -244,68 +277,78 @@ function judge(e) {
   if (imageJudge === 1) {
     if (keyname === 'y') {
       judgeCount++;
-      judgeArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/maru.png?raw=true';
+      judgeArea_img_02.style.display = "block";
       if (seconds <= 1) {
-        //時給up条件
+        //時給up条件(1秒以内に正しい判断)
         salary(1)
       }
-      stop()
+      // stop()
     }
     if (keyname === 'n') {
       judgeCount++;
-      judgeArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/batu.png?raw=true';
-      //買い取り条件
+      judgeArea_img_03.style.display = "block";
+      //買い取り条件(見本通りなのにn)
       salary(2)
     }
   }
   else {
     if (keyname === 'y') {
       judgeCount++;
-      judgeArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/batu.png?raw=true';
-      //時給down条件
+      judgeArea_img_03.style.display = "block";
+      //時給down条件(見本と違うのにy)
       salary(3)
     }
     if (keyname === 'n') {
       judgeCount++;
-      judgeArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/maru.png?raw=true';
+      judgeArea_img_02.style.display = "block";
       if (seconds <= 1) {
-        //時給up条件
+        //時給up条件(1秒以内に正しい判断)
         salary(1)
       }
-      stop()
+      //stop()
     }
   }
+  start()
 }
 
 
 
 
 function salary(resrut) {
+
+  //updown表示の初期化
+  updownArea_img_02.style.display = "none";
+  updownArea_img_03.style.display = "none";
+  updownArea_img_04.style.display = "none";
+
   //時給up条件
   if (resrut === 1) {
+    updownArea_img_01.style.display = "block";
     niceCount++
     if (niceCount % 3 === 0) {
       //時給up
       upCount++
-      updownArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/up.png?raw=true'
+      updownArea_img_02.style.display = "block";
     }
   }
   //買い取り条件
   if (resrut === 2) {
     //買い取り
     buyCount++
-    updownArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/buy.png?raw=true'
+    updownArea_img_04.style.display = "block";
   }
   //時給down条件
   if (resrut === 3) {
+    updownArea_img_01.style.display = "block";
     badCount++
     if (badCount % 3 === 0) {
       //時給down
       downCount++
-      updownArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/down.png?raw=true'
+      updownArea_img_03.style.display = "block";
     }
   }
 
+  //時給計算
   jikyuu = 1200 + (100 * upCount) - (100 * downCount);
 
   //終了ボタンクリック時
@@ -314,18 +357,29 @@ function salary(resrut) {
   }
 
   displayArea.innerText = '現在の時給' + jikyuu + '円';
-  stop()
+  start()
 }
 
 
+/*
+//問題と問題の間を0.2秒開ける
+function stop(){
+  quizArea.src = './img/siro.png';
+
+    start()
+
+}
+*/
+
+/*
 
 //問題と問題の間を0.2秒開ける
   function stop(){
-    quizArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true';
+    quizArea.src = './img/siro.png';
    setTimeout(() => {
       start()
     },200);
   }
 
-
+*/
 

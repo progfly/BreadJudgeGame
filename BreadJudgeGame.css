@@ -44,26 +44,109 @@ body {
 }
 
 
-#answerArea{
+#answerArea {
   float: left;
   margin: auto;
+width: 120px;       /* 適当な幅を指定 */
+height: 131px;      /* 適当な高さを指定 */
+position: relative; /* 基準位置とする */
 }
-#judgeArea{
+/* 共通するCSS */
+#answerArea img {
+width: 120px;       /* 適当な幅を指定 */
+position: absolute; /* 相対位置に指定 */
+}
+#answerArea #answerArea_img_01 {
+/* 左上に固定 */
+top: 0;
+left: 0;
+}
+#answerArea #answerArea_img_02 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+#answerArea #answerArea_img_03 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+#answerArea #answerArea_img_04 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+
+#judgeArea {
   float: left;
   font-size: x-large;
   margin-right: 10px;
   margin-left: 100px;
   margin-top: 20px;
-
+width: 100px;       /* 適当な幅を指定 */
+height: 100px;      /* 適当な高さを指定 */
+position: relative; /* 基準位置とする */
 }
-#updownArea{
+/* 共通するCSS */
+#judgeArea img {
+width: 100px;       /* 適当な幅を指定 */
+position: absolute; /* 相対位置に指定 */
+}
+#judgeArea #judgeArea_img_01 {
+/* 左上に固定 */
+top: 0;
+left: 0;
+}
+#judgeArea #judgeArea_img_02 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+#judgeArea #judgeArea_img_03 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+
+
+#updownArea {
   float: right;
   margin-top: 20px;
   margin-right: 50px;
   margin-left: 10px;
   margin-bottom: 0px;
-
+width: 70px;       /* 適当な幅を指定 */
+height: 42px;      /* 適当な高さを指定 */
+position: relative; /* 基準位置とする */
 }
+/* 共通するCSS */
+#updownArea img {
+width: 70px;       /* 適当な幅を指定 */
+position: absolute; /* 相対位置に指定 */
+}
+#updownArea #updownArea_img_01 {
+/* 左上に固定 */
+top: 0;
+left: 0;
+}
+#updownArea #updownArea_img_02 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+#updownArea #updownArea_img_03 {
+/* 右下に固定 */
+top: 0;
+left: 0;
+}
+#updownArea #updownArea_img_04 {
+  /* 右下に固定 */
+  top: 0;
+  left: 0;
+  }
+
+
+
 #displayArea{
   float: right;
   font-size: x-large;
@@ -104,3 +187,4 @@ button {
   margin-right: auto;
   margin-left: auto;
 }
+

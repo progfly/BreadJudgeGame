@@ -10,19 +10,61 @@ const answerArea_img_01 = document.getElementById('answerArea_img_01');
 const answerArea_img_02 = document.getElementById('answerArea_img_02');
 const answerArea_img_03 = document.getElementById('answerArea_img_03');
 const answerArea_img_04 = document.getElementById('answerArea_img_04');
-//answerArea_img_01.style.display = "none";
+
 answerArea_img_02.style.display = "none";
 answerArea_img_03.style.display = "none";
 answerArea_img_04.style.display = "none";
-const quizArea = document.getElementById('quizArea');
+
+const quizArea = document.getElementById("quizArea");
+const quizArea_img_01 = document.getElementById('quizArea_img_01');
+const melonpan_quizArea_img_01 = document.getElementById('melonpan_quizArea_img_01');
+const melonpan_quizArea_img_02 = document.getElementById('melonpan_quizArea_img_02');
+const melonpan_quizArea_img_03 = document.getElementById('melonpan_quizArea_img_03');
+const melonpan_quizArea_img_04 = document.getElementById('melonpan_quizArea_img_04');
+const melonpan_quizArea_img_05 = document.getElementById('melonpan_quizArea_img_05');
+const melonpan_quizArea_img_06 = document.getElementById('melonpan_quizArea_img_06');
+melonpan_quizArea_img_01.style.display = "none";
+melonpan_quizArea_img_02.style.display = "none";
+melonpan_quizArea_img_03.style.display = "none";
+melonpan_quizArea_img_04.style.display = "none";
+melonpan_quizArea_img_05.style.display = "none";
+melonpan_quizArea_img_06.style.display = "none";
+
+const syokupan_quizArea_img_01 = document.getElementById('syokupan_quizArea_img_01');
+const syokupan_quizArea_img_02 = document.getElementById('syokupan_quizArea_img_02');
+const syokupan_quizArea_img_03 = document.getElementById('syokupan_quizArea_img_03');
+const syokupan_quizArea_img_04 = document.getElementById('syokupan_quizArea_img_04');
+const syokupan_quizArea_img_05 = document.getElementById('syokupan_quizArea_img_05');
+const syokupan_quizArea_img_06 = document.getElementById('syokupan_quizArea_img_06');
+syokupan_quizArea_img_01.style.display = "none";
+syokupan_quizArea_img_02.style.display = "none";
+syokupan_quizArea_img_03.style.display = "none";
+syokupan_quizArea_img_04.style.display = "none";
+syokupan_quizArea_img_05.style.display = "none";
+syokupan_quizArea_img_06.style.display = "none";
+
+const mushipan_quizArea_img_01 = document.getElementById('mushipan_quizArea_img_01');
+const mushipan_quizArea_img_02 = document.getElementById('mushipan_quizArea_img_02');
+const mushipan_quizArea_img_03 = document.getElementById('mushipan_quizArea_img_03');
+const mushipan_quizArea_img_04 = document.getElementById('mushipan_quizArea_img_04');
+const mushipan_quizArea_img_05 = document.getElementById('mushipan_quizArea_img_05');
+const mushipan_quizArea_img_06 = document.getElementById('mushipan_quizArea_img_06');
+mushipan_quizArea_img_01.style.display = "none";
+mushipan_quizArea_img_02.style.display = "none";
+mushipan_quizArea_img_03.style.display = "none";
+mushipan_quizArea_img_04.style.display = "none";
+mushipan_quizArea_img_05.style.display = "none";
+mushipan_quizArea_img_06.style.display = "none";
+
+
 //見本画像
-const answerImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/melonpan_board.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/syokupan_board.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/mushi_board.png?raw=true'];
+const answerImages = ['./img/melonpan_board.png', './img/syokupan_board.png', './img/mushi_board.png'];
 //No0～4正しい画像　5~9間違え画像
-const ZeroquizImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/food_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad1_pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad2_pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad3_pan_melonpan.png?raw=true'];
-const OnequizImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bread_syokupan_usui.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_toast_kongari.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad1_bread_syokupan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad2_bread_syokupan.png?raw=true'];
-const TwoquizImages = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_mushipan_white.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/pan_melonpan.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad1_pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad2_pan_mushipan_yellow.png?raw=true', 'https://github.com/progfly/BreadJudgeGame/blob/main/img/bad3_pan_mushipan_yellow.png?raw=true'];
+const ZeroquizImages = ['./img/pan_melonpan.png', './img/pan_melonpan.png', './img/pan_melonpan.png', './img/pan_melonpan.png', './img/pan_melonpan.png', './img/food_melonpan.png', './img/bread_syokupan.png', './img/bad1_pan_melonpan.png', './img/bad2_pan_melonpan.png', './img/bad3_pan_melonpan.png'];
+const OnequizImages = ['./img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan.png', './img/bread_syokupan_usui.png', './img/pan_toast_kongari.png', './img/pan_mushipan_yellow.png', './img/bad1_bread_syokupan.png', './img/bad2_bread_syokupan.png'];
+const TwoquizImages = ['./img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_yellow.png', './img/pan_mushipan_white.png', './img/pan_melonpan.png', './img/bad1_pan_mushipan_yellow.png', './img/bad2_pan_mushipan_yellow.png', './img/bad3_pan_mushipan_yellow.png'];
 //他の画像
-const images = ['https://github.com/progfly/BreadJudgeGame/blob/main/img/log.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/board.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/han_siro.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/konbea.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/maru.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/batu.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/up.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/down.png?raw=true','https://github.com/progfly/BreadJudgeGame/blob/main/img/buy.png?raw=true'];
+const images = ['./img/log.png','./img/board.png','./img/siro.png','./img/han_siro.png','./img/konbea.png','./img/maru.png','./img/batu.png','./img/up.png','./img/down.png','./img/buy.png'];
 //判断表示場所
 const judgeArea_img_01 = document.getElementById('judgeArea_img_01');
 const judgeArea_img_02 = document.getElementById('judgeArea_img_02');
@@ -142,12 +184,35 @@ gameStart.addEventListener("click", () => {
 //終了ボタンクリック
 gameStop.addEventListener("click", () => {
 
+
+  melonpan_quizArea_img_01.style.display = "none";
+  melonpan_quizArea_img_02.style.display = "none";
+  melonpan_quizArea_img_03.style.display = "none";
+  melonpan_quizArea_img_04.style.display = "none";
+  melonpan_quizArea_img_05.style.display = "none";
+  melonpan_quizArea_img_06.style.display = "none";
+
+  syokupan_quizArea_img_01.style.display = "none";
+syokupan_quizArea_img_02.style.display = "none";
+syokupan_quizArea_img_03.style.display = "none";
+syokupan_quizArea_img_04.style.display = "none";
+syokupan_quizArea_img_05.style.display = "none";
+syokupan_quizArea_img_06.style.display = "none";
+
+mushipan_quizArea_img_01.style.display = "none";
+mushipan_quizArea_img_02.style.display = "none";
+mushipan_quizArea_img_03.style.display = "none";
+mushipan_quizArea_img_04.style.display = "none";
+mushipan_quizArea_img_05.style.display = "none";
+mushipan_quizArea_img_06.style.display = "none";
+
+
   //開始ボタンクリックから終了ボタンクリックまでの時間
   let currentGameTime = Date.now();
   let gameSeconds = (currentGameTime - startGameTime) / 1000;
 
   //問題表示場所の初期化
-  quizArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true';
+  quizArea_img_01.style.display = "block";
 
   //終了ボタン押された回数
   allStop++
@@ -187,6 +252,29 @@ function image() {
   answerArea_img_03.style.display = "none";
   answerArea_img_04.style.display = "none";
 
+
+  melonpan_quizArea_img_01.style.display = "none";
+  melonpan_quizArea_img_02.style.display = "none";
+  melonpan_quizArea_img_03.style.display = "none";
+  melonpan_quizArea_img_04.style.display = "none";
+  melonpan_quizArea_img_05.style.display = "none";
+  melonpan_quizArea_img_06.style.display = "none";
+
+  syokupan_quizArea_img_01.style.display = "none";
+syokupan_quizArea_img_02.style.display = "none";
+syokupan_quizArea_img_03.style.display = "none";
+syokupan_quizArea_img_04.style.display = "none";
+syokupan_quizArea_img_05.style.display = "none";
+syokupan_quizArea_img_06.style.display = "none";
+
+mushipan_quizArea_img_01.style.display = "none";
+mushipan_quizArea_img_02.style.display = "none";
+mushipan_quizArea_img_03.style.display = "none";
+mushipan_quizArea_img_04.style.display = "none";
+mushipan_quizArea_img_05.style.display = "none";
+mushipan_quizArea_img_06.style.display = "none";
+
+
   //見本の選択
   const answerImageNo = Math.floor(Math.random() * answerImages.length)
 
@@ -194,13 +282,34 @@ function image() {
   if (answerImageNo === 0) {
     answerArea_img_02.style.display = "block";
     const ZeroquizImageNo = Math.floor(Math.random() * ZeroquizImages.length)
-    quizArea.src = ZeroquizImages[ZeroquizImageNo];
     if (ZeroquizImageNo < 5) {
       //見本メロンパン時の正解
+      melonpan_quizArea_img_01.style.display = "block";
       return 1;
     }
-    else {
+    if (ZeroquizImageNo === 5) {
       //見本メロンパン時の不正解
+      melonpan_quizArea_img_02.style.display = "block";
+      return 2;
+    }
+    if (ZeroquizImageNo === 6) {
+      //見本メロンパン時の不正解
+      melonpan_quizArea_img_03.style.display = "block";
+      return 2;
+    }
+    if (ZeroquizImageNo === 7) {
+      //見本メロンパン時の不正解
+      melonpan_quizArea_img_04.style.display = "block";
+      return 2;
+    }
+    if (ZeroquizImageNo === 8) {
+      //見本メロンパン時の不正解
+      melonpan_quizArea_img_05.style.display = "block";
+      return 2;
+    }
+    if (ZeroquizImageNo === 9) {
+      //見本メロンパン時の不正解
+      melonpan_quizArea_img_06.style.display = "block";
       return 2;
     }
   }
@@ -208,24 +317,72 @@ function image() {
   if (answerImageNo === 1) {
     answerArea_img_03.style.display = "block";
     const OnequizImageNo = Math.floor(Math.random() * OnequizImages.length)
-    quizArea.src = OnequizImages[OnequizImageNo];
     if (OnequizImageNo < 5) {
       //見本食パン時の正解
+      syokupan_quizArea_img_01.style.display = "block";
       return 1;
     }
-    else {
+    if (OnequizImageNo === 5) {
       //見本食パン時の不正解
+      syokupan_quizArea_img_02.style.display = "block";
       return 2;
     }
+    if (OnequizImageNo === 6) {
+      //見本食パン時の不正解
+      syokupan_quizArea_img_03.style.display = "block";
+      return 2;
+    }
+    if (OnequizImageNo === 7) {
+      //見本食パン時の不正解
+      syokupan_quizArea_img_04.style.display = "block";
+      return 2;
+    }
+    if (OnequizImageNo === 8) {
+      //見本食パン時の不正解
+      syokupan_quizArea_img_05.style.display = "block";
+      return 2;
+    }
+    if (OnequizImageNo === 9) {
+      //見本食パン時の不正解
+      syokupan_quizArea_img_06.style.display = "block";
+      return 2;
+    }
+
   }
   //見本蒸しパン
   if (answerImageNo === 2) {
     answerArea_img_04.style.display = "block";
     const TwoquizImageNo = Math.floor(Math.random() * TwoquizImages.length)
-    quizArea.src = TwoquizImages[TwoquizImageNo];
+
     if (TwoquizImageNo < 5) {
       //見本蒸しパン時の正解
+      mushipan_quizArea_img_01.style.display = "block";
       return 1;
+    }
+    if (TwoquizImageNo === 5) {
+      //見本食パン時の不正解
+      mushipan_quizArea_img_02.style.display = "block";
+      return 2;
+    }
+    if (TwoquizImageNo === 6) {
+      //見本食パン時の不正解
+      mushipan_quizArea_img_03.style.display = "block";
+      return 2;
+    }
+    if (TwoquizImageNo === 7) {
+      //見本食パン時の不正解
+      mushipan_quizArea_img_04.style.display = "block";
+      return 2;
+    }
+    if (TwoquizImageNo === 8) {
+      //見本食パン時の不正解
+      mushipan_quizArea_img_05.style.display = "block";
+      return 2;
+    }
+    if (TwoquizImageNo === 9) {
+      //見本食パン時の不正解
+      mushipan_quizArea_img_06.style.display = "block";
+      return 2;
     }
     else {
       //見本蒸しパン時の不正解
@@ -364,7 +521,7 @@ function salary(resrut) {
 /*
 //問題と問題の間を0.2秒開ける
 function stop(){
-  quizArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true';
+  quizArea.src = './img/siro.png';
 
     start()
 
@@ -375,7 +532,7 @@ function stop(){
 
 //問題と問題の間を0.2秒開ける
   function stop(){
-    quizArea.src = 'https://github.com/progfly/BreadJudgeGame/blob/main/img/siro.png?raw=true';
+    quizArea.src = './img/siro.png';
    setTimeout(() => {
       start()
     },200);

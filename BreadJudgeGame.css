@@ -55,27 +55,10 @@ position: relative; /* 基準位置とする */
 #answerArea img {
 width: 120px;       /* 適当な幅を指定 */
 position: absolute; /* 相対位置に指定 */
-}
-#answerArea #answerArea_img_01 {
-/* 左上に固定 */
 top: 0;
 left: 0;
 }
-#answerArea #answerArea_img_02 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
-#answerArea #answerArea_img_03 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
-#answerArea #answerArea_img_04 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
+
 
 #judgeArea {
   float: left;
@@ -91,22 +74,10 @@ position: relative; /* 基準位置とする */
 #judgeArea img {
 width: 100px;       /* 適当な幅を指定 */
 position: absolute; /* 相対位置に指定 */
-}
-#judgeArea #judgeArea_img_01 {
-/* 左上に固定 */
 top: 0;
 left: 0;
 }
-#judgeArea #judgeArea_img_02 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
-#judgeArea #judgeArea_img_03 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
+
 
 
 #updownArea {
@@ -123,27 +94,10 @@ position: relative; /* 基準位置とする */
 #updownArea img {
 width: 70px;       /* 適当な幅を指定 */
 position: absolute; /* 相対位置に指定 */
-}
-#updownArea #updownArea_img_01 {
-/* 左上に固定 */
 top: 0;
 left: 0;
 }
-#updownArea #updownArea_img_02 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
-#updownArea #updownArea_img_03 {
-/* 右下に固定 */
-top: 0;
-left: 0;
-}
-#updownArea #updownArea_img_04 {
-  /* 右下に固定 */
-  top: 0;
-  left: 0;
-  }
+
 
 
 
@@ -161,9 +115,22 @@ left: 0;
   margin-right: auto;
   margin-left: auto;
 }
-#quizArea{
-  margin: auto;
+
+
+
+#quizArea {
+width: 100px;       /* 適当な幅を指定 */
+height: 100px;      /* 適当な高さを指定 */
+position: relative; /* 基準位置とする */
 }
+/* 共通するCSS */
+#quizArea img {
+width: 100px;       /* 適当な幅を指定 */
+position: absolute; /* 相対位置に指定 */
+top: 0;
+left: 0;
+}
+
 #konbea{
   clear: left;
   margin: auto;

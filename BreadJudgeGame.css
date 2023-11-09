@@ -10,12 +10,12 @@ body {
   clear: both;
 }
 
-#logo{
-    float: left;
+#logo {
+  float: left;
   padding: 3px;
   background-color: #ec404b;
 }
-#titleArea{
+#titleArea {
   float: left;
   margin: auto;
   color: #ffffff;
@@ -23,9 +23,7 @@ body {
   margin-bottom: 10px;
 }
 
-
-#ru-ruArea{
-
+#ruleArea {
   text-align: center;
   width: 400px;
   margin-right: auto;
@@ -33,32 +31,36 @@ body {
   background: #f3fbff;
   border: 2px skyblue dashed;
 }
-#judgeRu-ru{
-
+#judgeRule {
+  font-size: large;
+}
+#salaryRule {
   font-size: x-small;
   text-align: left;
   width: 250px;
   margin-right: auto;
   margin-left: auto;
-
 }
-
 
 #answerArea {
   float: left;
   margin: auto;
-width: 120px;       /* 適当な幅を指定 */
-height: 131px;      /* 適当な高さを指定 */
-position: relative; /* 基準位置とする */
+  width: 120px;
+  /* 適当な幅を指定 */
+  height: 131px;
+  /* 適当な高さを指定 */
+  position: relative;
+  /* 基準位置とする */
 }
 /* 共通するCSS */
 #answerArea img {
-width: 120px;       /* 適当な幅を指定 */
-position: absolute; /* 相対位置に指定 */
-top: 0;
-left: 0;
+  width: 120px;
+  /* 適当な幅を指定 */
+  position: absolute;
+  /* 相対位置に指定 */
+  top: 0;
+  left: 0;
 }
-
 
 #judgeArea {
   float: left;
@@ -66,19 +68,22 @@ left: 0;
   margin-right: 10px;
   margin-left: 100px;
   margin-top: 20px;
-width: 100px;       /* 適当な幅を指定 */
-height: 100px;      /* 適当な高さを指定 */
-position: relative; /* 基準位置とする */
+  width: 100px;
+  /* 適当な幅を指定 */
+  height: 100px;
+  /* 適当な高さを指定 */
+  position: relative;
+  /* 基準位置とする */
 }
 /* 共通するCSS */
 #judgeArea img {
-width: 100px;       /* 適当な幅を指定 */
-position: absolute; /* 相対位置に指定 */
-top: 0;
-left: 0;
+  width: 100px;
+  /* 適当な幅を指定 */
+  position: absolute;
+  /* 相対位置に指定 */
+  top: 0;
+  left: 0;
 }
-
-
 
 #updownArea {
   float: right;
@@ -86,22 +91,24 @@ left: 0;
   margin-right: 50px;
   margin-left: 10px;
   margin-bottom: 0px;
-width: 70px;       /* 適当な幅を指定 */
-height: 42px;      /* 適当な高さを指定 */
-position: relative; /* 基準位置とする */
+  width: 70px;
+  /* 適当な幅を指定 */
+  height: 42px;
+  /* 適当な高さを指定 */
+  position: relative;
+  /* 基準位置とする */
 }
 /* 共通するCSS */
 #updownArea img {
-width: 70px;       /* 適当な幅を指定 */
-position: absolute; /* 相対位置に指定 */
-top: 0;
-left: 0;
+  width: 70px;
+  /* 適当な幅を指定 */
+  position: absolute;
+  /* 相対位置に指定 */
+  top: 0;
+  left: 0;
 }
 
-
-
-
-#displayArea{
+#displayArea {
   float: right;
   font-size: x-large;
   margin-right: 0px;
@@ -110,38 +117,41 @@ left: 0;
   margin-bottom: 10px;
 }
 
-#quiz{
+#quiz {
   width: 500px;
   margin-right: auto;
   margin-left: auto;
 }
-
-
-
 #quizArea {
-width: 100px;       /* 適当な幅を指定 */
-height: 100px;      /* 適当な高さを指定 */
-position: relative; /* 基準位置とする */
+  width: 100px;
+  /* 適当な幅を指定 */
+  height: 100px;
+  /* 適当な高さを指定 */
+  position: relative;
+  /* 基準位置とする */
 }
 /* 共通するCSS */
 #quizArea img {
-width: 100px;       /* 適当な幅を指定 */
-position: absolute; /* 相対位置に指定 */
-top: 0;
-left: 0;
+  width: 100px;
+  /* 適当な幅を指定 */
+  position: absolute;
+  /* 相対位置に指定 */
+  top: 0;
+  left: 0;
 }
 
-#konbea{
+#quizLine {
   clear: left;
   margin: auto;
 }
 
-#buttonArea{
+#buttonArea {
   text-align: center;
   width: 500px;
   margin-right: auto;
   margin-left: auto;
 }
+
 button {
   padding: 5px 20px;
   background-color: #337ab7;
@@ -149,9 +159,8 @@ button {
   border-style: none;
 }
 
-#resrutArea{
+#resultArea {
   width: 500px;
   margin-right: auto;
   margin-left: auto;
 }
-
